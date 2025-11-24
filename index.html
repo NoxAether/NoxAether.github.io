@@ -1,1 +1,53 @@
-<!doctypehtml><html lang=en><head><meta charset=UTF-8><title>Maine WebAssembly</title><style>body,canvas,html{margin:0;padding:0;width:100%;height:100%;display:block}body{background:#111;color:#fff;font-family:sans-serif;display:flex;justify-content:center;align-items:center}</style></head><body><canvas id=canvas></canvas><script async src=index.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Emscripten Default</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: monospace;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background: #000;
+    }
+    #output {
+      width: 100%;
+      height: 200px;
+      background: #000;
+      color: #fff;
+      font-family: monospace;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" tabindex="-1"></canvas>
+  <textarea id="output" rows="8"></textarea>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+    var output = document.getElementById('output');
+
+    var Module = {
+      canvas: canvas,
+      print: function(text) {
+        if (output) {
+          output.value += text + "\n";
+          output.scrollTop = output.scrollHeight;
+        }
+        console.log(text);
+      },
+      printErr: function(text) {
+        console.error(text);
+      }
+    };
+  </script>
+  <script async src="index.js"></script>
+</body>
+</html>
