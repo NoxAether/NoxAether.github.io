@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maine WebAssembly</title>
+    <style>
+        html, body, canvas { margin:0; padding:0; width:100%; height:100%; display:block; }
+        body { background:#111; color:#fff; font-family:sans-serif; display:flex; justify-content:center; align-items:center; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <!-- This is required for em++ to insert the generated JS -->
+    {{{ SCRIPT }}}
+
+</body>
+</html>
