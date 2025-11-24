@@ -8,7 +8,7 @@ LDFLAGS = -s EXPORTED_RUNTIME_METHODS='["ccall","cwrap"]' -s WASM=1
 PROJECT = maine
 
 SRC_DIR = src
-BIN_DIR = bin
+BIN_DIR = docs
 
 SRC = $(wildcard $(SRC_DIR)/*.cpp)
 OUT = $(BIN_DIR)/$(PROJECT).html
