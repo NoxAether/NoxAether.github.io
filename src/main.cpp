@@ -13,9 +13,7 @@ auto main() -> int {
     // Initialization
     //--------------------------------------------------------------------------------------
 
-    const char* title = SCREEN_TITLE;
-
-    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, title);
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE);
 
     GameScreen currentScreen = LOGO;
 
